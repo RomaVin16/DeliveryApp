@@ -1,6 +1,6 @@
 ﻿using DeliveryApp.Contracts;
 
-namespace DeliveryApp
+namespace DeliveryApp.Services
 {
     public static class ServiceConfigurator
     {

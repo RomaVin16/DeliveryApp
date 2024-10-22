@@ -1,13 +1,14 @@
 ﻿using DeliveryApp.Contracts;
+using DeliveryApp.Models;
 using Serilog;
 using System.ComponentModel;
 using System.Text.Json;
 
-namespace DeliveryApp
+namespace DeliveryApp.Services
 {
-    public class FileService: IFileService
+    public class FileService : IFileService
     {
-/// <summary>
+        /// <summary>
         /// Чтение данных о заказах из файла json 
         /// </summary>
         /// <param name="filePath"></param>

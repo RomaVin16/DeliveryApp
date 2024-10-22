@@ -1,6 +1,6 @@
 ﻿using Serilog;
 
-namespace DeliveryApp
+namespace DeliveryApp.Helpers
 {
     public class Validator
     {
@@ -61,17 +61,17 @@ namespace DeliveryApp
 
                 Console.WriteLine();
                 Console.Write("Введите название района: ");
-district = Console.ReadLine();
+                district = Console.ReadLine();
 
-    if (_acceptableDistricts.Contains(district))
-    {
-        isCorrect = true;
-        Log.Information("Район {District} введен корректно.", district);
+                if (_acceptableDistricts.Contains(district))
+                {
+                    isCorrect = true;
+                    Log.Information("Район {District} введен корректно.", district);
                 }
-     else
-    {
-        Console.WriteLine("Район не найден. Введите еще раз.");
-        Log.Information("Район {District} не найден.", district);
+                else
+                {
+                    Console.WriteLine("Район не найден. Введите еще раз.");
+                    Log.Information("Район {District} не найден.", district);
                 }
             }
 

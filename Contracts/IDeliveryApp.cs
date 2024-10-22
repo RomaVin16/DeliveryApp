@@ -1,4 +1,6 @@
-﻿namespace DeliveryApp.Contracts
+﻿using DeliveryApp.Models;
+
+namespace DeliveryApp.Contracts
 {
     public interface IDeliveryApp
     {

@@ -1,9 +1,10 @@
 ﻿using DeliveryApp.Contracts;
+using DeliveryApp.Models;
 using Serilog;
 
-namespace DeliveryApp
+namespace DeliveryApp.Services
 {
-    public class DeliveryApp: IDeliveryApp
+    public class DeliveryApp : IDeliveryApp
     {
         private readonly string inputFilePath;
         private readonly string resultFilePath;
@@ -41,7 +42,7 @@ namespace DeliveryApp
             }
             catch (Exception e)
             {
-                Log.Error(e, "При обработке файла произошла ошибка. Файл: {FilePath}, Район: {District}", inputFilePath,  district);
+                Log.Error(e, "При обработке файла произошла ошибка. Файл: {FilePath}, Район: {District}", inputFilePath, district);
             }
 
             return filteredOrders;
